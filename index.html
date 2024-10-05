@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Calorie Calculator by Rahul Dotania</title>
+
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <nav class="navbar">
+        <a class="navbar-brand" href="#">FitKit</a>
+        <div class="ml-auto text-right">
+          <span class="nav-link text-muted">Made with ❤️ by Rahul Dotaniya</span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          
+        </div>
+      </nav>
+    </header>
+    <!-- calorie counter app -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Calorie Calculator App</h1>
+            <form id="calorie-form">
+
+              <div class="form-group row">
+                <label for="age" class="col-sm-2 col-form-label">Age</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="age" placeholder="Ages 15-80">
+                </div>
+              </div>
+
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                  <div class="col-sm-10" id="form-radio">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="male" name="customRadioInline1" class="custom-control-input" checked="checked">
+                      <label class="custom-control-label" for="male">Male</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="female" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="female">Female</label>
+                    </div>  
+                  </div>
+                </div> 
+              </fieldset> 
+
+              <div class="form-group row">
+                <label for="weight" class="col-sm-2 col-form-label">Weight</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="weight" placeholder="In kilograms">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="height" class="col-sm-2 col-form-label">Height</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="height" placeholder="In centimeters">
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <legend class="col-form-label col-sm-2 pt-0">Activity</legend>
+                <select class="custom-select col-sm-10" id="list">
+                  <option selected value="1">Sedentary (little or no exercise)</option>
+                  <option value="2">Lightly active (light exercise/sports 1-3 days/week)</option>
+                  <option value="3">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                  <option value="4">Very active (hard exercise/sports 6-7 days a week)</option>
+                  <option value="5">Extra active (very hard exercise/sports & physical job or 2x training)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary btn-block">
+              </div>
+
+            </form>
+
+            <div id="loading">
+              <img src="./img/Loading.gif" alt="">
+            </div>
+
+            <div id="results" class="pt-4">
+              <h5>Total Calories</h5>
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="number" class="form-control" id="total-calories" disabled>
+                </div>
+              </div>                       
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!-- accordian for weight -->
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Gain Weight
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              To gain weight, you need to eat a calorie surplus, which means consuming more calories than your body uses each day. To gain approximately 1 kg in a week, aim for a surplus of about 500 calories daily. If you want to increase your weight by about 0.5 kg in a week, you should aim for an additional 250 calories each day. This process requires a thoughtful approach to your meals and snacks. Start by adding healthy snacks like nuts, cheese, yogurt, and protein bars between meals. These foods are not only tasty but also high in calories, making them perfect for weight gain.
+              When it comes to meals, try to eat larger portions. Choose foods that are rich in calories, such as avocados, peanut butter, whole grains like brown rice and quinoa, and healthy fats like olive oil and coconut milk. Incorporating fatty fish, like salmon, can provide both protein and healthy fats. Don’t forget about dark chocolate as a treat—it’s calorie-dense and can satisfy your sweet cravings.
+              Smoothies and shakes can be a great way to increase your calorie intake without feeling too full. You can blend fruits, yogurt, milk, and even add protein powder or nut butter for an extra boost. Dried fruits, like apricots and raisins, are excellent snacks that pack a lot of calories in a small serving.
+              It’s also important to focus on protein-rich foods, such as eggs, lean meats, and legumes, to help build muscle as you gain weight. Consider adding full-fat dairy products, like whole milk and cheese, to your meals.
+              Make sure your meals are balanced with protein, fats, and carbohydrates to support your body as you gain weight. You might want to plan your meals ahead of time to ensure you’re hitting your calorie goals. Remember to be patient, as healthy weight gain takes time, and it’s important to listen to your body throughout the process!
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Lose Weight
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              To lose weight, you need to create a calorie deficit, which means consuming fewer calories than your body uses each day. To lose approximately 1 kg in a week, aim for a deficit of about 500 calories daily. If you want to lose about 0.5 kg in a week, you should aim for a daily deficit of around 250 calories. This requires careful planning of your meals and snacks. Start by focusing on whole, nutrient-dense foods like fruits, vegetables, lean proteins, and whole grains. These foods are typically lower in calories but high in volume, helping you feel full while reducing overall calorie intake.
+              Incorporate foods like leafy greens, berries, and lean meats such as chicken or turkey into your meals. Healthy fats, like those found in avocados and nuts, can also help you feel satisfied, but be mindful of portion sizes since they are calorie-dense. Drinking plenty of water can keep you hydrated and may help control hunger.
+              Choose lower-calorie snacks, such as carrot sticks, air-popped popcorn, or Greek yogurt, to satisfy cravings without adding too many calories. Be cautious with high-calorie beverages, like sugary drinks and alcohol, as they can add up quickly.
+              It’s important to ensure that your meals are balanced with protein, healthy fats, and carbohydrates to keep your energy levels steady. Planning your meals ahead of time can help you stay on track and avoid impulsive eating. Remember that healthy weight loss takes time, so be patient with yourself and listen to your body throughout the process!
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Maintain weight
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              To maintain your weight, you need to consume about the same number of calories as your body uses each day, achieving a calorie balance. This requires knowing your daily caloric needs, which can vary based on factors like age, gender, activity level, and metabolism. A good starting point is to calculate your maintenance calories, and you can adjust based on your individual goals.
+              Focus on eating a balanced diet that includes a variety of foods from all food groups. Incorporate plenty of fruits and vegetables, lean proteins like chicken, fish, and beans, whole grains, and healthy fats from sources like avocados and nuts. This variety will help you get the nutrients you need while keeping your meals satisfying.
+              Pay attention to portion sizes to ensure you’re not unintentionally overeating. Eating mindfully and paying attention to hunger cues can help you maintain your weight more effectively. Regularly include physical activity in your routine, as exercise plays a key role in weight maintenance by burning calories and boosting metabolism.
+              Stay hydrated by drinking plenty of water and be cautious with high-calorie beverages, as they can contribute to weight gain. Planning meals ahead of time can help you stick to your goals and make healthier choices. Remember, maintaining your weight is about finding a balance that works for you and being patient as you adjust to your new lifestyle!
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- accordian for weight/\\ -->
+       
+    </div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
